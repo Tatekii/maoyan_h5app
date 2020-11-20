@@ -4,7 +4,7 @@ VUE+KOA2+MONGODB+ELE UI
 ## 启动项目
 - mongodb
 ```javascript
-mongo --dbpath //[数据库地址] [server/db]
+mongod --dbpath //[数据库地址] [server/db]
 ```
 初始db文件夹为空
 - server
