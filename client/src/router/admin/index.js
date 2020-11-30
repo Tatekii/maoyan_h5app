@@ -6,14 +6,6 @@ export default {
       path: "userAdm",
       component: () => import("@/views/Admin/userAdm")
     },
-    {
-      path: "movieAdm",
-      component: () => import("@/views/Admin/movieAdm")
-    },
-    {
-      path: "cinemaAdm",
-      component: () => import("@/views/Admin/cinemaAdm")
-    },
     // 默认定向
     {
       path: "",

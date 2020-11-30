@@ -42,6 +42,8 @@ export default {
       currentPage:1
     }
   },
+  components:{
+  },
   computed:{
     pageData(){
       return this.tableData.slice((this.currentPage-1)*this.pageSize,this.currentPage*this.pageSize)

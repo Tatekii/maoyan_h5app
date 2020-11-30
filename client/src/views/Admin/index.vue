@@ -78,8 +78,9 @@ export default {
         });
       });
     }
+  },
+  components:{
   }
-
 }
 </script>
 

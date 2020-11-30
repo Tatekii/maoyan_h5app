@@ -4,13 +4,16 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "report": "vue-cli-service build --report"
   },
   "dependencies": {
     "axios": "^0.19.1",
+    "babel-plugin-component": "^1.1.1",
     "better-scroll": "^1.15.2",
     "core-js": "^3.6.4",
     "element-ui": "^2.13.0",
+    "html-webpack-plugin": "^4.5.0",
     "node-gyp": "^6.1.0",
     "postcss-px-to-viewport": "^1.1.1",
     "postcss-write-svg": "^3.0.1",
@@ -20,10 +23,15 @@
     "vuex": "^3.1.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-stage-2": "^7.8.3",
     "@vue/cli-plugin-babel": "^4.1.0",
     "@vue/cli-plugin-router": "^4.1.0",
     "@vue/cli-plugin-vuex": "^4.1.0",
     "@vue/cli-service": "^4.1.0",
+    "babel-loader": "^8.2.2",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "vue-template-compiler": "^2.6.10"

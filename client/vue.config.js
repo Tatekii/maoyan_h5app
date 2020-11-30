@@ -1,3 +1,12 @@
+const isProduction = process.env.NODE_ENV === "production";
+const cdn = {
+  js: [
+    "https://cdn.bootcdn.net/ajax/libs/vue/2.6.0/vue.runtime.esm.js",
+    "https://cdn.bootcdn.net/ajax/libs/vue-router/3.1.3/vue-router.esm.js",
+    "https://cdn.bootcdn.net/ajax/libs/better-scroll/2.0.0/better-scroll.esm.min.js"
+  ],
+};
+
 module.exports = {
   publicPath: "/MOVI",
   devServer: {
@@ -47,11 +56,24 @@ module.exports = {
     sockHost: " http://192.168.50.61:8080 ",
     disableHostCheck: true,
   },
-
+  configureWebpack: (config) => {
+    if (isProduction) {
+      config.externals = {
+        "vue": "Vue",
+        "vue-router": "VueRouter",
+        "better-scroll": "BetterScroll",
+      };
+    }
+  },
   chainWebpack: (config) => {
-    // 修复HMR
     config.resolve.symlinks(true);
-  }
+    if (isProduction) {
+      config.plugin("html").tap((args) => {
+        args[0].cdn = cdn;
+        return args;
+      });
+    }
+  },
 };
 
 // "/api/comingSoon": {
