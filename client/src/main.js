@@ -20,7 +20,6 @@ Object.defineProperty(Vue.prototype, "axios", {
   },
 })
 Vue.use(eleUi)
-console.log(Vue);
 // for (let item of [MenuItem,Container,Header,Aside,Main,Input,Footer,Avatar, Menu, Table, TableColumn, Pagination,Button]) {
 //   Vue.use(item);
 // }
