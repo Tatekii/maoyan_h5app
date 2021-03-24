@@ -1,3 +1,4 @@
+working on vue3 version 👉[https://github.com/Tatekii/maoyan_vue3](https://github.com/Tatekii/maoyan_vue3)
 # 仿猫眼电影H5
 VUE+KOA2+MONGODB+ELE UI
 
